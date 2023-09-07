@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Data Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .container {
+            width: 500px;
+            margin: 0 auto;
+        }
+
+        .data-item {
+            margin-bottom: 10px;
+        }
+
+        img {
+            width: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Personal Data</h1>
+
+        <div class="data-item">
+            <label for="slackUserName">Abdulsalam Abubakar Imam</label>
+            <input type="text" id="abubakarimam" data-testid="slackUserName">
+        </div>
+
+        <div class="data-item">
+            <label for="slackDisplayImage">Slack Display Picture</label>
+            <img src="https://ca.slack-edge.com/T05FFAA91JP-U05R8BS9DHB-59ce2633cd30-512" alt="abubakarimam"
+                id="slackDisplayImage" data-testid="slackDisplayImage">
+        </div>
+
+        <div class="data-item">
+            <label for="currentDayOfTheWeek">Current Day of the Week</label>
+            <input type="text" id="currentDayOfTheWeek" data-testid="currentDayOfTheWeek">
+        </div>
+
+        <div class="data-item">
+            <label for="currentUTCTime">Current UTC Time</label>
+            <input type="text" id="currentUTCTime" data-testid="currentUTCTime" value="12:33:39">
+        </div>
+
+        <div class="data-item">
+            <label for="myTrack">Frontend</label>
+            <input type="text" id="myTrack" data-testid="myTrack" value="Frontend">
+        </div>
+
+        <div class="data-item">
+            <label for="githubURL">GitHub URL</label>
+            <a href="https://github.com/AbubakarImam/abubakarimam-zuri-internship.git" id="githubURL"
+                data-testid="githubURL">https://github.com/bard-ai</a>
+        </div>
+    </div>
+
+    <script>
+        let dateTime = new Date();
+        document.getElementById("currentDayOfTheWeek").value = dateTime.getDay();
+        document.getElementById("currentUTCTime").value = dateTime.toUTCString();
+    </script>
+</body>
+
+</html>
